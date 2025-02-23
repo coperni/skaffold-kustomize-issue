@@ -1,0 +1,13 @@
+apiVersion: skaffold/v4beta7
+kind: Config
+profiles:
+  - name: dev
+    manifests:
+      kustomize:
+        paths:
+          - overlays/dev
+  - name: prod
+    manifests:
+      kustomize:
+        paths:
+          - overlays/prod

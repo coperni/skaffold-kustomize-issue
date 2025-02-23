@@ -1,0 +1,10 @@
+resources:
+  - ../../base
+namePrefix: prod-
+patches:
+  - target:
+      kind: Pod
+    patch: |-
+      - op: replace
+        path: /spec/containers/0/image
+        value: nginx:123
